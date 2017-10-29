@@ -3,7 +3,7 @@ var path = require('path')
 module.exports = {
   entry: './src/lib/index.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.join(__dirname, './dist'),
     filename: 'vue-toast-demo.js',
     libraryTarget: 'umd',
     library: 'VueToastDemo'
@@ -23,7 +23,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: path.resolve(__dirname, 'src'),
+        include: path.join(__dirname, 'src'),
         exclude: /node_modules/
       }
     ]
